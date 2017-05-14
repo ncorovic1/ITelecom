@@ -21,4 +21,4 @@ Route::get('/home', 'HomeController@index');
 
 Route::get('/contact', function () {
     return view('contact');
-});
+})->middleware('auth', 'admin');

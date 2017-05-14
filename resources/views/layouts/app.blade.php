@@ -8,6 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     
+    <!-- Title -->
     @yield('title')
 
     <!-- Styles -->
@@ -56,11 +57,17 @@
                             <li><a href="{{ url('/login') }}">Login</a></li>
                             <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
-                            <li><a href="{{ url('/') }}">Home</a></li>
-                            <li><a href="{{ url('/contact') }}">Contact</a></li>
+                                <li><a href="{{ url('/') }}">Home</a></li>
+                            @if (Auth::user()->type == 'admin')
+                                <li><a href="{{ url('/contact') }}">Admin links</a></li>
+                            @elseif (Auth::user()->type == 'worker')
+                                <li><a href="{{ url('/contact') }}">Worker links</a></li>
+                            @elseif (Auth::user()->type == 'client')
+                                <li><a href="{{ url('/contact') }}">Client links</a></li>
+                            @endif
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                    {{ Auth::user()->full_name }} <span class="caret"></span>
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
@@ -84,9 +91,9 @@
         </nav>
     </div>
     @yield('content')
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
     
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>   
     @yield('scripts')
 </body>
 </html>

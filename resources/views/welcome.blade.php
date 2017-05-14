@@ -5,6 +5,8 @@
 @endsection
 
 @section('styles')
+    <link rel="stylesheet" href="{{ config('app.filePath'). '/css/app.css' }}" />
+<!--
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/iconfont.css' }}" />
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/slick/slick.css' }}" />
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/slick/slick-theme.css' }}" />
@@ -13,6 +15,7 @@
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/bootstrap.css' }}" />
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/bootstrap.min.css' }}" />
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/magnific-popup.css' }}" />
+-->
 
     <!--For Plugins external css-->
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/plugins.css' }}" />
@@ -20,7 +23,6 @@
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/style.css' }}" />
     <!--Theme Responsive css-->
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/responsive.css' }}" />
-<!--    <link rel="stylesheet" href="{{ config('app.filePath'). '/css/app.css' }}" />-->
 @endsection
 
 @section('fonts')
@@ -42,7 +44,7 @@
                                     <div class="single_home_slider">
                                         <div class="main_home wow fadeInUp" data-wow-duration="700ms">
                                             <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
-                                            <h1>DOBRODOŠLI NA ITELECOM</h1>
+                                            <h1>DOBRO DOŠLI NA ITELECOM</h1>
                                             <div class="separator"></div>
                                             <p>Kratak opis</p>
                                             <div class="home_btn">
@@ -54,30 +56,26 @@
                                     </div>
                                     <div class="single_home_slider">
                                         <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                            <h3>Our Clients Are Our First Priority</h3>
-                                            <h1>WELCOME TO BINO</h1>
+                                            <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
+                                            <h1>DOBRO DOŠLI NA ITELECOM</h1>
                                             <div class="separator"></div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                                standard dummy text ever since the 1500s, when an unknown printer took a galley 
-                                                of type and scrambled it to make a type specimen book.</p>
+                                            <p>Kratak opis</p>
                                             <div class="home_btn">
-                                                <a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a>
-                                                <a href="" class="btn btn-default">LEARN MORE</a>
+                                                <a href="" class="btn btn-lg m_t_10">Treba li nam?</a>
+                                                <a href="" class="btn btn-default">Treba li nam?</a>
                                             </div>
 
                                         </div>
                                     </div>
                                     <div class="single_home_slider">
                                         <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                            <h3>Our Clients Are Our First Priority</h3>
-                                            <h1>WELCOME TO BINO</h1>
+                                            <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
+                                            <h1>DOBRO DOŠLI NA ITELECOM</h1>
                                             <div class="separator"></div>
-                                            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-                                                standard dummy text ever since the 1500s, when an unknown printer took a galley 
-                                                of type and scrambled it to make a type specimen book.</p>
+                                            <p>Kratak opis</p>
                                             <div class="home_btn">
-                                                <a href="" class="btn btn-lg m_t_10">GET STARTED NOW</a>
-                                                <a href="" class="btn btn-default">LEARN MORE</a>
+                                                <a href="" class="btn btn-lg m_t_10">Treba li nam?</a>
+                                                <a href="" class="btn btn-default">Treba li nam?</a>
                                             </div>
 
                                         </div>
@@ -108,8 +106,7 @@
 
                                 <h4>FIKSNA TELEFONIJA</h4>
                                 <div class="separator3"></div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                    Lorem Ipsum has been the industry.</p>
+                                <p></p>
                             </div>
                         </div>
 
@@ -121,8 +118,7 @@
 
                                 <h4>MOBILNA TELEFONIJA</h4>
                                 <div class="separator3"></div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                    Lorem Ipsum has been the industry.</p>
+                                <p></p>
                             </div>
                         </div>
 
@@ -133,8 +129,7 @@
                                 </div>
                                 <h4>INTERNET</h4>
                                 <div class="separator3"></div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                    Lorem Ipsum has been the industry.</p>
+                                <p></p>
                             </div>
                         </div>
 
@@ -146,8 +141,7 @@
 
                                 <h4>TELEVIZIJA</h4>
                                 <div class="separator3"></div>
-                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting let. 
-                                    Lorem Ipsum has been the industry.</p>
+                                <p></p>
                             </div>
                         </div>
 
@@ -202,17 +196,17 @@
 
 @section('scripts') 
     <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/jquery-1.11.2.min.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/bootstrap.min.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.magnific-popup.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.mixitup.min.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.easing.1.3.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.masonry.min.js' }}" /></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/jquery-1.11.2.min.js' }}"></script>
+<!--    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/bootstrap.min.js' }}"></script>-->
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.magnific-popup.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.mixitup.min.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.easing.1.3.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.masonry.min.js' }}"></script>
 
     <!--slick slide js -->
-    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.min.js' }}" /></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.min.js' }}"></script>
 
-    <script src="{{ config('app.filePath'). '/templateAssets/js/plugins.js' }}" /></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/main.js' }}" /></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/plugins.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/main.js' }}"></script>
 @endsection
