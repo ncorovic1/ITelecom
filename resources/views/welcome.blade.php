@@ -6,23 +6,9 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ config('app.filePath'). '/css/app.css' }}" />
-<!--
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/iconfont.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/slick/slick.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/slick/slick-theme.css' }}" />
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/font-awesome.min.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/jquery.fancybox.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/bootstrap.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/bootstrap.min.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/magnific-popup.css' }}" />
--->
-
-    <!--For Plugins external css-->
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/plugins.css' }}" />
     <!--Theme custom css -->
     <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/style.css' }}" />
-    <!--Theme Responsive css-->
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/responsive.css' }}" />
 @endsection
 
 @section('fonts')
@@ -31,7 +17,6 @@
 @endsection
 
 @section('content') 
-    <div class='preloader'><div class='loaded'>&nbsp;</div></div>
     <div class="culmn">
         <!--home Section -->
         <section id="home" class="home">
@@ -46,38 +31,11 @@
                                             <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
                                             <h1>DOBRO DOŠLI NA ITELECOM</h1>
                                             <div class="separator"></div>
-                                            <p>Kratak opis</p>
+                                            <p>Vaš omiljeni operater!</p>
                                             <div class="home_btn">
                                                 <a href="" class="btn btn-lg m_t_10">Treba li nam?</a>
                                                 <a href="" class="btn btn-default">Treba li nam?</a>
                                             </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="single_home_slider">
-                                        <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                            <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
-                                            <h1>DOBRO DOŠLI NA ITELECOM</h1>
-                                            <div class="separator"></div>
-                                            <p>Kratak opis</p>
-                                            <div class="home_btn">
-                                                <a href="" class="btn btn-lg m_t_10">Treba li nam?</a>
-                                                <a href="" class="btn btn-default">Treba li nam?</a>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="single_home_slider">
-                                        <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                            <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
-                                            <h1>DOBRO DOŠLI NA ITELECOM</h1>
-                                            <div class="separator"></div>
-                                            <p>Kratak opis</p>
-                                            <div class="home_btn">
-                                                <a href="" class="btn btn-lg m_t_10">Treba li nam?</a>
-                                                <a href="" class="btn btn-default">Treba li nam?</a>
-                                            </div>
-
                                         </div>
                                     </div>
                                 </div>
@@ -106,7 +64,7 @@
 
                                 <h4>FIKSNA TELEFONIJA</h4>
                                 <div class="separator3"></div>
-                                <p></p>
+                                <p class="lead"> Tradicionalna telefonska usluga fiksnim telefonom je najbolji, najjednostavniji i nezamjenjiv način komunikacije! </p>
                             </div>
                         </div>
 
@@ -117,8 +75,8 @@
                                 </div>
 
                                 <h4>MOBILNA TELEFONIJA</h4>
-                                <div class="separator3"></div>
-                                <p></p>
+                                <div class="separator3"> </div>
+                                <p class="lead"> Želite pričati, slati poruke i surfati? Ultra je savršen izbor za vas! </p>
                             </div>
                         </div>
 
@@ -129,7 +87,7 @@
                                 </div>
                                 <h4>INTERNET</h4>
                                 <div class="separator3"></div>
-                                <p></p>
+                                <p class="lead"> Želite da imate pristup internetu uvijek? Ultra Internet je savršen izbor za vas! </p>
                             </div>
                         </div>
 
@@ -141,7 +99,7 @@
 
                                 <h4>TELEVIZIJA</h4>
                                 <div class="separator3"></div>
-                                <p></p>
+                                <p class="lead"> Želite vaše omiljene tv kanale ili radio stanice? Izaberite mojaTV! </p>
                             </div>
                         </div>
 
@@ -159,7 +117,7 @@
                     <div class="main_history">
                         <div class="col-sm-6">
                             <div class="single_history_img">
-                                <img src="{{ config('app.filePath'). '/templateAssets/images/stab1.png' }}" alt="" />
+                                <img src="{{ config('app.filePath'). '/images/telecom.jpg' }}" alt="" />
                             </div>
                         </div>
 
@@ -176,15 +134,7 @@
             </div><!--End of container -->
         </section><!--End of history -->
 
-
-        <!--Footer section-->
-        <section class="footer">
-            <div class="container">
-                <div class="row">
-                </div>
-            </div>
-        </section><!-- End off footer Section-->
-
+    <!-- End off footer Section-->
     </div>
 
     <!-- START SCROLL TO TOP  -->
@@ -195,18 +145,4 @@
 @endsection
 
 @section('scripts') 
-    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/jquery-1.11.2.min.js' }}"></script>
-<!--    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/bootstrap.min.js' }}"></script>-->
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.magnific-popup.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.mixitup.min.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.easing.1.3.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.masonry.min.js' }}"></script>
-
-    <!--slick slide js -->
-    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.min.js' }}"></script>
-
-    <script src="{{ config('app.filePath'). '/templateAssets/js/plugins.js' }}"></script>
-    <script src="{{ config('app.filePath'). '/templateAssets/js/main.js' }}"></script>
 @endsection

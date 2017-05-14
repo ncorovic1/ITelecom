@@ -55,10 +55,10 @@
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
                         @else
                                 <li><a href="{{ url('/') }}">Home</a></li>
                             @if (Auth::user()->type == 'admin')
+                                <li><a href="{{ url('/register') }}">Register User</a></li>
                                 <li><a href="{{ url('/contact') }}">Admin links</a></li>
                             @elseif (Auth::user()->type == 'worker')
                                 <li><a href="{{ url('/contact') }}">Worker links</a></li>

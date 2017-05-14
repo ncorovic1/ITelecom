@@ -36,7 +36,8 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware('auth');
+        $this->middleware('admin');
     }
 
     /**
@@ -71,5 +72,12 @@ class RegisterController extends Controller
             'telephone' => $data['telephone'],
             'type'      => $data['type'],
         ]);
+    }
+    
+    public function register(\Illuminate\Http\Request $request)
+    {
+        $this->validator($request->all())->validate();
+        $this->create($request->all());
+        return redirect($this->redirectPath());
     }
 }
