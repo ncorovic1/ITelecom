@@ -13,7 +13,14 @@
 
     <!-- Styles -->
     @yield('styles')
-
+    <style>
+        .navbarFont {
+            font-size: 14px;
+            font-family: Raleway,sans-serif;
+            font-weight: 300;
+            color: #5e5e5e;
+        }
+    </style>
     <!-- Fonts -->
     @yield('fonts')
     
@@ -51,7 +58,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right navbarFont">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
                             <li><a href="{{ url('/login') }}">Login</a></li>
@@ -93,7 +100,7 @@
     @yield('content')
     
     <!-- Scripts -->
-    <script src="/js/app.js"></script>   
+    <script src="{{ config('app.filePath'). '/js/app.js' }}"></script>
     @yield('scripts')
 </body>
 </html>
