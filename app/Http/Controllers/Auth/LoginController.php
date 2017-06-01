@@ -3,7 +3,11 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\LoginAttemptController;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
@@ -25,7 +29,23 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
+
+    public function authenticate(Request $request)
+    {
+        $controller = new LoginAttemptController();
+
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password]))
+        {
+            $controller->logLoginAttempt($request, 'SUCCESSFUL');
+        }
+        else 
+        {
+            $controller->logLoginAttempt($request, 'FAILED');
+        }
+
+        return $this->login($request);
+    }
 
     /**
      * Create a new controller instance.

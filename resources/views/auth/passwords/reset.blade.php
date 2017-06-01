@@ -1,5 +1,13 @@
 @extends('layouts.app')
 
+@section('styles')
+<link href="/css/app.css" rel="stylesheet">
+@endsection
+
+@section('title')
+<title> Prijava — ITelecom </title>
+@endsection
+
 @section('content')
 <div class="container">
     <div class="row">

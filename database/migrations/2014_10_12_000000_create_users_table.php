@@ -23,6 +23,16 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        DB::table('users')->insert([
+                'full_name' => 'Administrator',
+                'email' => 'admin@itelecom.com',
+                'password' => bcrypt('admin'),
+                'type' => 'admin',
+                'telephone' => '+38761100100',
+                'created_at' =>  \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now(),
+        ]);
     }
 
     /**

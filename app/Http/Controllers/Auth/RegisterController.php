@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use View;
+use App\Models\User;
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 
@@ -36,7 +38,6 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth');
         $this->middleware('admin');
     }
 
@@ -63,21 +64,16 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return User
      */
-    protected function create(array $data)
+    protected function create(Request $request)
     {
-        return User::create([
-            'full_name' => $data['full_name'],
-            'email'     => $data['email'],
-            'password'  => bcrypt($data['password']),
-            'telephone' => $data['telephone'],
-            'type'      => $data['type'],
+        User::create([
+            'full_name' => $request['full_name'],
+            'email'     => $request['email'],
+            'password'  => bcrypt($request['password']),
+            'telephone' => $request['telephone'],
+            'type'      => $request['type'],
         ]);
-    }
-    
-    public function register(\Illuminate\Http\Request $request)
-    {
-        $this->validator($request->all())->validate();
-        $this->create($request->all());
-        return redirect($this->redirectPath());
+
+        return view('auth.register')->with('dodan', 'dodan');
     }
 }

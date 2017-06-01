@@ -6,9 +6,7 @@
 
 @section('styles')
     <link rel="stylesheet" href="{{ config('app.filePath'). '/css/app.css' }}" />
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/font-awesome.min.css' }}" />
-    <!--Theme custom css -->
-    <link rel="stylesheet" href="{{ config('app.filePath'). '/templateAssets/css/style.css' }}" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 @endsection
 
 @section('fonts')
@@ -16,133 +14,129 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,600i,700,700i" rel="stylesheet">
 @endsection
 
-@section('content') 
-    <div class="culmn">
-        <!--home Section -->
-        <section id="home" class="home">
-            <div class="overlay">
-                <div class="home_skew_border">
-                    <div class="container">
+@section('content')
+    <div class="container-fluid">
+                <!--<style>
+                    body {
+                        background: url(images/telecom.jpg) no-repeat center center;
+                    }
+                </style>-->
+
+                <div class="panel panel-default">
+                    <!--<div class="panel-heading">
+                        <h3 class="panel-title">
+                            Panel title
+                        </h3>
+                    </div>-->
+                    <div class="panel-body">
+                        
+
+
                         <div class="row">
-                            <div class="col-sm-12 ">
-                                <div class="main_home_slider text-center">
-                                    <div class="single_home_slider">
-                                        <div class="main_home wow fadeInUp" data-wow-duration="700ms">
-                                            <h3>Zadovoljstvo klijenata je naš prioritet!</h3>
-                                            <h1>DOBRO DOŠLI NA ITELECOM</h1>
-                                            <div class="separator"></div>
-                                            <p>Vaš omiljeni operater!</p>
-                                            <div class="home_btn">
-                                                <a href="" class="btn btn-lg m_t_10">Treba li nam?</a>
-                                                <a href="" class="btn btn-default">Treba li nam?</a>
+                            <div class="col-md-12">
+                                <div class="carousel slide" id="carousel-632874">
+                                    <ol class="carousel-indicators">
+                                        <li class="active" data-slide-to="0" data-target="#carousel-632874">
+                                        </li>
+                                        <li data-slide-to="1" data-target="#carousel-632874">
+                                        </li>
+                                        <li data-slide-to="2" data-target="#carousel-632874">
+                                        </li>
+                                        <li data-slide-to="3" data-target="#carousel-632874">
+                                        </li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="item active">
+                                            <img alt="Carousel Bootstrap First" src="/images/landline-1600x500.jpg" />
+                                            <div class="carousel-caption">
+                                                <h4>
+                                                    <a href="/fiksna-telefonija">FIKSNA TELEFONIJA</a>
+                                                </h4>
+                                                <p>
+                                                    Pričajte više, plaćajte manje i iskoristite napredne usluge fiskne telefonije.
+                                                </p>
                                             </div>
                                         </div>
-                                    </div>
+                                        <div class="item">
+                                            <img alt="Carousel Bootstrap Second" src="/images/pexels-photo-1600x500.jpg" />
+                                            <div class="carousel-caption">
+                                                <h4>
+                                                    <a href="/mobilna-telefonija">MOBILNA TELEFONIJA</a>
+                                                </h4>
+                                                <p>
+                                                    Pričajte više, plaćajte manje i iskoristite napredne usluge mobilne telefonije.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img alt="Carousel Bootstrap Third" src="/images/101413-1600x500.jpg" />
+                                            <div class="carousel-caption">
+                                                <h4>
+                                                    <a href="/internet">INTERNET</a>
+                                                    <!--{{ $_SERVER['REMOTE_ADDR'] }}-->
+                                                </h4>
+                                                <p>
+                                                    Superbrzi internet u kući, kao i mreža za van kuće na 100 hiljada lokacija u zemlji i regionu.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="item">
+                                            <img alt="Carousel Bootstrap Third" src="/images/watchingtv-1600x500.jpg" />
+                                            <div class="carousel-caption">
+                                                <h4>
+                                                    <a href="/tv">TELEVIZIJA</a>
+                                                </h4>
+                                                <p>
+                                                    Gledajte preko 200 vrhunskih digitalnih kanala i 50 HD kanala.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div> <a class="left carousel-control" href="#carousel-632874" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a> <a class="right carousel-control" href="#carousel-632874" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                                 </div>
                             </div>
                         </div>
+
+
+                        
                     </div>
-                    <div class="scrooldown">
-                        <a href="#feature"><i class="fa fa-arrow-down"></i></a>
-                    </div>
+                    <div class="panel-footer">
+					        <a href="/politika-sigurnosti"><span class="glyphicon glyphicon-info-sign"></span>&nbsp;&nbsp;Politika informacijske sigurnosti</a>
+				        </div>
                 </div>
-            </div>
-        </section><!--End of home section -->
 
 
-        <!--feature section -->
-        <section id="feature" class="feature sections">
-            <div class="container">
-                <div class="row">
-                    <div class="main_feature text-center">
-
-                        <div class="col-sm-3">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-phone fa-2x"></i>
-                                </div>
-
-                                <h4>FIKSNA TELEFONIJA</h4>
-                                <div class="separator3"></div>
-                                <p class="lead"> Tradicionalna telefonska usluga fiksnim telefonom je najbolji, najjednostavniji i nezamjenjiv način komunikacije! </p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-mobile fa-2x"></i>
-                                </div>
-
-                                <h4>MOBILNA TELEFONIJA</h4>
-                                <div class="separator3"> </div>
-                                <p class="lead"> Želite pričati, slati poruke i surfati? Ultra je savršen izbor za vas! </p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-globe fa-2x"></i>
-                                </div>
-                                <h4>INTERNET</h4>
-                                <div class="separator3"></div>
-                                <p class="lead"> Želite da imate pristup internetu uvijek? Ultra Internet je savršen izbor za vas! </p>
-                            </div>
-                        </div>
-
-                        <div class="col-sm-3">
-                            <div class="single_feature">
-                                <div class="single_feature_icon">
-                                    <i class="fa fa-television fa-2x"></i>
-                                </div>
-
-                                <h4>TELEVIZIJA</h4>
-                                <div class="separator3"></div>
-                                <p class="lead"> Želite vaše omiljene tv kanale ili radio stanice? Izaberite mojaTV! </p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div><!--End of container -->
-        </section><!--End of feature Section -->
-        <hr />
+                    
 
 
-        <!-- History section -->
-        <section id="history" class="history sections">
-            <div class="container">
-                <div class="row">
-                    <div class="main_history">
-                        <div class="col-sm-6">
-                            <div class="single_history_img">
-                                <img src="{{ config('app.filePath'). '/images/telecom.jpg' }}" alt="" />
-                            </div>
-                        </div>
-
-                        <div class="col-sm-6">
-                            <div class="single_history_content">
-                                <div class="head_title">
-                                    <h2>O NAMA</h2>
-                                </div>
-                                <p> infooooo... </p>
-                            </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            
+                                
+                            
                         </div>
                     </div>
-                </div><!--End of row -->
-            </div><!--End of container -->
-        </section><!--End of history -->
 
-    <!-- End off footer Section-->
-    </div>
 
-    <!-- START SCROLL TO TOP  -->
 
-    <div class="scrollup">
-        <a href="#"><i class="fa fa-chevron-up"></i></a>
+
+
+
     </div>
 @endsection
 
 @section('scripts') 
+    <!--<script src="{{ config('app.filePath'). '/templateAssets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/jquery-1.11.2.min.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/vendor/bootstrap.min.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.magnific-popup.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.mixitup.min.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.easing.1.3.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/jquery.masonry.min.js' }}"></script>-->
+
+    <!--slick slide js -->
+    <!--<script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/css/slick/slick.min.js' }}"></script>
+
+    <script src="{{ config('app.filePath'). '/templateAssets/js/plugins.js' }}"></script>
+    <script src="{{ config('app.filePath'). '/templateAssets/js/main.js' }}"></script>-->
 @endsection

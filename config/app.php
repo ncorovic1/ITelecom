@@ -39,7 +39,7 @@ return [
     |
     */
 
-    'debug' => env('APP_DEBUG', false),
+    'debug' => env('APP_DEBUG', true),
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Europe/Sarajevo',
 
     /*
     |--------------------------------------------------------------------------
@@ -136,6 +136,8 @@ return [
     |
     */
 
+    'PDF'       => Barryvdh\DomPDF\Facade::class,
+
     'providers' => [
 
         /*
@@ -163,6 +165,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        //Barryvdh\DomPDF\ServiceProvider::class,
 
         /*
          * Package Service Providers...
